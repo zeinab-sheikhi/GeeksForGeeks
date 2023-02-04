@@ -1,14 +1,22 @@
 Gradient Descent is an optimization algorithm used for minimizing the cost function in various machine learning algorithms.
 It is basically used for updating the parameters of the learning model.
+
 Types of gradient Descent:
+
 1. Batch Gradient Descent: This is a type of gradient descent which processes all the training examples for each iteration of gradient descent. 
 But if the number of training examples is large, then batch gradient descent is computationally very expensive. 
 Hence if the number of training examples is large, then batch gradient descent is not preferred.
 Instead, we prefer to use stochastic gradient descent or mini-batch gradient descent.
+
 2. Stochastic Gradient Descent: This is a type of gradient descent which processes 1 training example per iteration.
 Hence, the parameters are being updated even after one iteration in which only a single example has been processed. 
 Hence this is quite faster than batch gradient descent. But again, when the number of training examples is large, 
 even then it processes only one example which can be additional overhead for the system as the number of iterations will be quite large.
+In SGD, since only one sample from the dataset is chosen at random for each iteration, 
+the path taken by the algorithm to reach the minima is usually noisier than your typical Gradient Descent algorithm.
+One thing to be noted is that, as SGD is generally noisier than typical Gradient Descent, it usually took
+a higher number of iterations to reach the minima, because of its randomness in its descent. 
+
 3. Mini Batch gradient descent: This is a type of gradient descent which works faster than both batch gradient descent and stochastic gradient descent. 
 Here b examples where b<m are processed per iteration. So even if the number of training examples is large,
 it is processed in batches of b training examples in one go. 
@@ -16,3 +24,6 @@ Thus, it works for larger training examples and that too with lesser number of i
 
 ** When using Gradient Descent, we should ensure that all features have a similar scale
 (e.g. using Scikit-Learn’s StandardScaler class), or else it will take much longer to converge.
+
+batch: the total number of samples from a dataset that is used
+for calculating the gradient for each iteration.
