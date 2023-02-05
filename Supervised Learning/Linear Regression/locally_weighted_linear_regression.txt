@@ -1,0 +1,8 @@
+when the relationship between the X and y is non-linear, the locally
+weighted linear regresison is used.
+It is a non-parametric algorithm.
+There exists No training phase.
+All the work is done during the testing phase/while making predictions.
+Locally weighted regression methods are a generalization of k-Nearest Neighbour.
+In a Non-Parametric Algorithm, you always have to keep the data and the parameters in your computer memory to make predictions.
+And that’s why this type of algorithm may not be great if you have a really really massive dataset.
