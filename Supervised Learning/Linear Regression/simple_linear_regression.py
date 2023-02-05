@@ -18,3 +18,4 @@ print('Coefficient:', model.coef_)
 y_pred = model.predict(x)
 mse = mean_squared_error(y, y_pred)
 print('Mean Squared Error:', mse)
+
