@@ -12,8 +12,13 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-# import tensorflow as tf
-from tensorflow.examples.tutorials.mnist import input_data
+import tensorflow as tf
+import tensorflow_datasets
 
-mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
-print(mnist)
+mnist = tensorflow_datasets.load('mnist')
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+
+print("Shape of feature matrix:", x_train)
+# print("Shape of target matrix:", mnist.train.labels.shape)
+# print("One-hot encoding for 1st observation:\n", mnist.train.labels[0])
+  
