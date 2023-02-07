@@ -1,5 +1,5 @@
 import nltk
-from nltk.tokenize import sent_tokenize, word_tokenize, TreebankWordTokenizer, PunktWordTokenizer, WordPunctTokenizer, RegexpTokenizer
+from nltk.tokenize import sent_tokenize, word_tokenize, TreebankWordTokenizer,  WordPunctTokenizer, RegexpTokenizer
 
 text = "Natural language processing (NLP) is a field " + \
        "of computer science, artificial intelligence " + \
@@ -17,23 +17,24 @@ text = "Natural language processing (NLP) is a field " + \
        "computer dialog systems, or some combination " + \
        "thereof."
 
-print(sent_tokenize(text))
-print(word_tokenize(text))
+# print(sent_tokenize(text))
+# print(word_tokenize(text))
 
 # Loading PunktSentenceTokenizer using English pickle file
 tokenizer = nltk.data.load('tokenizers/punkt/PY3/english.pickle')
 tokenizer.tokenize(text)
+print(tokenizer.tokenize(text))
 
-spanish_tokenizer = nltk.data.load('tokenizers/punkt/PY3/spanish.pickle')
+french_tokenizer = nltk.data.load('tokenizers/punkt/PY3/french.pickle')
   
-text = 'Hola amigo. Estoy bien.'
-spanish_tokenizer.tokenize(text)
+text = "j'ai vingt-quatre ans"
+print(french_tokenizer.tokenize(text))
 
 tokenizer = TreebankWordTokenizer()
-tokenizer.tokenize(text)
+print(tokenizer.tokenize(text))
 
-tokenizer = PunktWordTokenizer()
-tokenizer.tokenize("Let's see how it's working.")
+# tokenizer = PunktWordTokenizer()
+# tokenizer.tokenize("Let's see how it's working.")
 
 tokenizer = WordPunctTokenizer()
-tokenizer.tokenize("Let's see how it's working.")
+print(tokenizer.tokenize("Let's see how it's working."))
