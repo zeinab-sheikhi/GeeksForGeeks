@@ -1,5 +1,5 @@
 import nltk
-from nltk.tokenize import sent_tokenize, word_tokenize, TreebankWordTokenizer,  WordPunctTokenizer, RegexpTokenizer
+from nltk.tokenize import sent_tokenize, word_tokenize, TreebankWordTokenizer, WordPunctTokenizer, RegexpTokenizer
 
 text = "Natural language processing (NLP) is a field " + \
        "of computer science, artificial intelligence " + \
